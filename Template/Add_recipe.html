@@ -1,0 +1,37 @@
+{% extends "Base.html" %}
+{% load static %}
+
+{% block css %} <link rel="stylesheet" href="{% static 'Add_recipe.css' %}"> {% endblock css %}
+
+{% block main %}
+
+<div class="formsegment">
+    <div class="user-image me-3">
+        <img src="{% static 'images/add_recipe3.jpg' %}">
+    </div>
+    <div class="form-section">
+        <h2>Add a New Recipe</h2>
+        <form action="{% url 'SaveRecipes' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div>
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" name="username" placeholder="Enter your name..." required>
+            </div>
+            <div>
+                <label for="dishname">Dish Name:</label><br>
+                <input type="text" id="dishname" name="dishname" placeholder="Enter the dishname..." required>
+            </div>
+            <div>
+                <label for="ingredients">Ingredients:</label><br>
+                <textarea id="ingredients" name="ingredients" rows="5" cols="40" placeholder="Enter the ingredients..." required></textarea>
+            </div>
+            <div>
+                <label for="recipe">Recipe:</label><br>
+                <textarea id="recipe" name="recipe" rows="5" cols="40" placeholder="Enter your recipe..." required></textarea>
+            </div>
+            <button type="submit">Add Recipe</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

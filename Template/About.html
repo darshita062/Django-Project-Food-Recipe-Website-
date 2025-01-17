@@ -1,0 +1,64 @@
+{% extends "Base.html" %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'about.css' %}">
+{% endblock css %}
+
+{% block main %}
+<section class="about">
+    <h1>About Us</h1>
+    <p>Welcome to <strong>DeliciousBytes</strong>! We believe that cooking should be a joyful and enriching
+        experience. Our goal is to inspire food lovers of all skill levels by providing a wide range of delicious
+        recipes, cooking tips, and kitchen hacks.</p>
+
+    <div class="cards-container">
+        <div class="side-by-side-card mission-card">
+            <img src="{% static 'images/mission.jpg' %}" alt="Our Mission">
+            <div class="card-content">
+                <h2>Our Mission</h2>
+                <p>Our mission is simple: to make cooking easy, enjoyable, and accessible for everyone. Whether you’re a seasoned
+                    chef or a home cook just starting out, we’ve got something for you. We strive to curate recipes that suit
+                    every palate, dietary need, and occasion.</p>
+            </div>
+        </div>
+
+        <div class="side-by-side-card offer-card">
+            <div class="card-content">
+                <h2>What We Offer</h2>
+                <ul>
+                    <li>Tasty Recipes: From hearty main courses to delightful desserts, we offer a wide variety of recipes that are easy to follow.</li>
+                    <li>Step-by-Step Guides: Our recipes come with clear, detailed instructions and high-quality images to guide you through every step.</li>
+                    <li>Community Feedback: Share your experiences, tips, and feedback to connect with a community of food enthusiasts.</li>
+                </ul>
+            </div>
+            <img src="{% static 'images/WhatWeOffer.jpg' %}" alt="What We Offer">
+        </div>
+
+        <div class="side-by-side-card choose-us-card">
+            <img src="{% static 'images/WhyChooseUs.jpg' %}" alt="Why Choose Us">
+            <div class="card-content">
+                <h2>Why Choose Us?</h2>
+                <p>Diverse Cuisines: Explore a vast array of global recipes that bring the flavors of different cultures to your kitchen.</p>
+                <p>Healthy Options: We understand the importance of balanced eating, so we also offer a selection of healthy and nutritious meals.</p>
+                <p>Fresh Ingredients, Great Taste: We emphasize the use of fresh, wholesome ingredients to ensure the best flavors and nutritional value.</p>
+            </div>
+        </div>
+
+        <div class="side-by-side-card story-card">
+            <div class="card-content">
+                <h2>Our Story</h2>
+                <p><strong>DeliciousBytes</strong> started with a simple idea: to share the joy of cooking with people everywhere. Founded by a group of passionate food enthusiasts, our website has grown into a trusted source of culinary inspiration for thousands of users. We aim to continually expand our collection of recipes and provide useful resources to help everyone cook with confidence.</p>
+            </div>
+            <img src="{% static 'images/OurStory.jpg' %}" alt="Our Story">
+        </div>
+
+        <div class="side-by-side-card join-us-card">
+            <img src="{% static 'images/JoinUs.jpg' %}" alt="Join Us">
+            <div class="card-content">
+                <h2>Join Us</h2>
+                <p>Become a part of our growing food community. Whether you’re looking to try new recipes, improve your cooking skills, or simply explore new flavors, we are here to help. Dive in and discover the world of culinary possibilities!</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock main %}

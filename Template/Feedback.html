@@ -1,0 +1,57 @@
+{% extends "Base.html" %}
+{% load static %}
+
+{% block css %} <link rel="stylesheet" href="{% static 'Feedback.css' %}"> {% endblock css %}
+
+{% block main %}
+<style>
+    .container {
+        background-image: url("{% static 'images/feedback1.jpg' %}");
+    }
+</style>
+
+<div class="content">
+    <div class="container">
+        <form method="POST" action="{% url 'SaveFeedback' %}" id="feedback" role="form" novalidate style="margin-left:100px;">
+            {% csrf_token %}
+            <div class="form">
+                <h1>Feedback</h1>
+                <label for="name">Name:</label>
+                <input id="name" name="name" class="name" placeholder="Enter your name here..." required>
+                
+                <label for="email">Email:</label>
+                <input id="email" name="email" class="email" type="email" placeholder="Enter your email here..." required>
+                
+                <label for="query">Query:</label>
+                <input id="query" name="query" class="query" placeholder="Do you have any query..." required>
+                
+                <label for="feedback">Feedback:</label>
+                <input id="feedback" name="feedback" class="feedback" placeholder="Enter your feedback here..." required>
+                <button type="submit" name="submit">Submit</button>
+
+            </div>
+        </form>
+    </div>
+    <div class="feedbacksection">
+        <div class="card">
+            {% for feedback in feedbacks %}
+
+            <div class="card d-flex align-items-center justify-content-between flex-row mb-4 p-3 border rounded shadow">
+                <!-- User Image -->
+                <div class="user-image me-3 d-flex flex-column align-items-center">
+                    <img src="{% static 'images/user.jpg' %}" class="rounded-circle" style="width: 90px; height: 90px; object-fit: cover;">
+                    <h4 class="mb-0">{{feedback.name}}</h4>
+                </div>
+                <!-- Recipe Details -->
+                <div>
+                    <div class="mb-1 text-body-secondary">{{feedback.time_date}}</div>
+                    <p class="card-text mb-auto">{{feedback.feedback}}</p>
+                </div>
+            </div>
+            {% empty %}
+            <p>No feedback have been added yet!</p>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock main %}

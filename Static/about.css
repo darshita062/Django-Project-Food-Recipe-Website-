@@ -1,0 +1,49 @@
+.about {
+    text-align: center;
+    padding: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.side-by-side-card {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+}
+
+.side-by-side-card img {
+    width: 40%;
+    border-radius: 10px;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.mission-card {
+    background-color: rgb(231, 221, 255);
+}
+
+.offer-card {
+    background-color: rgb(255, 236, 161);
+}
+
+.choose-us-card {
+    background-color: rgb(164, 206, 255);
+}
+
+.story-card {
+    background-color: rgb(239, 255, 164);
+}
+
+.join-us-card {
+    background-color: rgb(239, 198, 160);
+}

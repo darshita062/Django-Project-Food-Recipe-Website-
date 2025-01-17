@@ -1,0 +1,126 @@
+/* Form Section */
+.formsegment {
+    margin: 20px auto;
+    max-width: 1200px;
+    padding: 20px;
+    width: 98%;
+    border-radius: 8px;
+    background-size: cover;
+    background-color: white;
+    display: flex; 
+    align-items: stretch; /* Ensures both form and image have the same height */
+    gap: 20px; 
+}
+
+.form-section {
+    position: relative; /* Sticky works with this */
+    padding: 20px;
+    border-radius: 8px;
+    margin: 0; /* Remove extra margin for alignment */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgb(19, 20, 20);
+    flex: 1; /* Allows the form to resize proportionally */
+}
+
+.form-section h2 {
+    text-align: center;
+    color: rgb(246, 248, 248);
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 20px;
+}
+
+.user-image {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    background-color: #fff; /* Optional background for image container */
+    border-radius: 8px;
+    overflow: hidden;
+    flex: 1; /* Matches the form size */
+}
+
+.user-image img {
+    width: 100%; /* Ensure the image scales to fill the container */
+    height: 100%; /* Match the container height */
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+form div {
+    margin-bottom: 15px; 
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-weight: bold;
+    color: rgb(252, 249, 249);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+form button {
+    padding: 10px;
+    background-color: #51d7c3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+form button:hover {
+    background-color: #2de0ba;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .formsegment {
+        flex-direction: column; /* Stack image and form vertically */
+    }
+
+    .form-section {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    form input,
+    form textarea {
+        font-size: 0.9rem;
+    }
+
+    form button {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-section h2 {
+        font-size: 1.2rem;
+    }
+
+    form input,
+    form textarea {
+        font-size: 0.8rem;
+    }
+
+    form button {
+        font-size: 0.8rem;
+    }
+}
+

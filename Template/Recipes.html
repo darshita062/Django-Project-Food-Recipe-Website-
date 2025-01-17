@@ -1,0 +1,30 @@
+{% extends "Base.html" %}
+{% load static %}
+
+{% block css %} <link rel="stylesheet" href="{% static 'Recipe.css' %}"> {% endblock css %}
+
+{% block main %}
+
+<div class="recipe-section">
+    <h2>Previous Recipes</h2>
+    {% for recipe in recipes %}
+    <div class="recipe-card d-flex align-items-center mb-4 p-3 border rounded shadow">
+        <!-- User Image -->
+        <div class="user-image me-3">
+            <img src="{% static 'images/user.jpg' %}" class="rounded-circle" style="width: 200px; height: 200px; object-fit: cover;">
+        </div>
+        <!-- Recipe Details -->
+        <div>
+            <h3>{{ recipe.dishname }}</h3>
+            <p><strong>By:</strong> {{ recipe.username }}</p>
+            <p><strong>Ingredients:</strong> {{ recipe.ingredients }}</p>
+            <p><strong>Recipe:</strong> {{ recipe.recipe }}</p>
+        </div>
+    </div>
+    {% empty %}
+    <p>No recipes have been added yet!</p>
+    {% endfor %}
+</div>
+
+
+{% endblock main %}

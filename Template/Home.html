@@ -1,0 +1,107 @@
+{% extends "Base.html" %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'Home.css' %}">
+{% endblock css %}
+
+{% block main %}
+<section>
+    <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+        <!-- Carousel Indicators -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        
+        <!-- Carousel Inner -->
+        <div class="carousel-inner">
+            <!-- First Slide -->
+            <div class="carousel-item active">
+                <img src="static/images/carousel1.jpg" class="d-block w-100" alt="Delicious Pasta">
+                <div class="container">
+                    <div class="carousel-caption text-start">
+                        <h1>Delicious Pasta</h1>
+                        <p >Explore the secrets of making creamy, delicious pasta with our step-by-step recipe.</p>
+                        <p>Try new recipes and if you have any then share it with everyone.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Second Slide -->
+            <div class="carousel-item">
+                <img src="static/images/carousel2.jpg" class="d-block w-100" alt="Fresh Salad">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Fresh Salad</h1>
+                        <p>Discover how to prepare a vibrant, healthy salad packed with fresh ingredients.</p>
+                        <p >Try new recipes and if you have any then share it with everyone.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Third Slide -->
+            <div class="carousel-item">
+                <img src="static/images/carousel3.jpg" class="d-block w-100" alt="Decadent Dessert">
+                <div class="container">
+                    <div class="carousel-caption text-end">
+                        <h1>Decadent Dessert</h1>
+                        <p>Indulge in a rich, chocolatey dessert that's perfect for any occasion.</p>
+                        <p >Try new recipes and if you have any then share it with everyone.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+</section>
+
+<!-- Hero 1 Section -->
+<section class="hero1">
+    <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+                <img src="{% static 'images/hero1.jpg' %}" class="d-block mx-lg-auto img-fluid hero-img" alt="Delicious Recipes" width="700" height="500" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+                <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3 fade-in">Discover Delicious Recipes</h1>
+                <p class="lead fade-in">Explore a variety of mouth-watering recipes, from quick snacks to gourmet dishes. Whether you're a beginner or a seasoned chef, our collection is designed to inspire your next culinary adventure.</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <a class="btn btn-outline-secondary btn-lg px-4 btn-animate" href="{% url 'Recipes' %}">Browse Recipes</a>
+                    <a class="btn btn-outline-secondary btn-lg px-4 btn-animate" href="{% url 'Add_Recipe' %}">Submit Your Own Recipe</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Hero 2 Section -->
+<section class="hero2">
+    <div class="px-4 pt-5 my-5 text-center border-bottom">
+        <h1 class="display-4 fw-bold text-body-emphasis fade-in">Explore the World of Recipes</h1>
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4 fade-in">Dive into a culinary adventure with our extensive collection of recipes. Discover authentic flavors, read user feedback, and learn more about our mission to bring food lovers together.</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+                <a href="{% url 'Feedback' %}" class="btn btn-outline-secondary btn-lg px-4 btn-animate">Read Feedback</a>
+                <a href="{% url 'About' %}" class="btn btn-outline-secondary btn-lg px-4 btn-animate">About Us</a>
+            </div>
+        </div>
+        <div class="overflow-hidden" style="max-height: 30vh;">
+            <div class="container px-5">
+                <img src="{% static 'images/hero2.jpg' %}" class="img-fluid border rounded-3 shadow-lg mb-4 hero-img" alt="A preview of recipes" width="700" height="500" loading="lazy">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+{% endblock main %}

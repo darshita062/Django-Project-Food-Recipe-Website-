@@ -5,3 +5,17 @@ In this website we can add new recipes that will be stored in the database and a
 The frontend part is built using HTML,CSS,Bootstrap.
 The Backend part is managed by dbSqlite a database provided by Django.
 (TechStack : HTML,CSS,Bootstrap,Django,Python)
+
+📘 Django Project Setup Guide
+
+This guide explains how to install dependencies and run the Django project on any system.
+
+✅ 1. Install Django manually: pip install django
+
+✅ 2. Run Database Migrations: python manage.py migrate 
+
+✅ 3. Create a Superuser (Optional: For Admin Panel): python manage.py createsuperuser
+
+✅ 4. Run the Project: python manage.py runserver
+
+
